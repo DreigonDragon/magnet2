@@ -32,11 +32,17 @@ def event_room_message(bot, (message, room, nick)):
     elif text == 'o.o':  res = 'O.O'
     elif text == 'O_o':  res = 'o_O'
     elif text == 'o_O':  res = 'O_o'
+    elif text == 'O.=.o': res = 'o.=.O'
+    elif text == 'o.=.O': res = 'O.=.o'
+    elif text == 'O.=.O': res = 'o.=.o'
+    elif text == 'o.=.o': res = 'O.=.O'
     elif text == '...':  res = 'Pacman will get you!'
-    elif text == '....': res = 'Pacman will get you!'
+    elif text == '....': res = 'Pacman will get you!!'
+    elif text == '.....': res = 'Pacman will get you!!!'
     elif text == '?':    res = u'\xbf'
-    elif text == 'k':    res = 'You forgot "o".'
+    elif text == 'k':    res = 'You forgot the "o".'
     elif text == 'lol':  res = '/me laughs out loud.'
+    elif text == '!?!': res = 'omg!'
     if res:
       bot.send_room_message(room, res)
 
