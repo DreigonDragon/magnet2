@@ -1,6 +1,7 @@
 #
 #  This file is part of Magnet2.
 #  Copyright (c) 2011  Grom PE
+#  Edited Slightly by various members of Dr@ggies.tk
 #
 #  Magnet2 is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -105,7 +106,12 @@ rndobjects = [
   "a Linksys 16-Port Workgroup Switch", "200 yards of Cat 4 cable", "Nemo",
   "a smoke detector", "moldy cheese that a mouse didn't eat", "33 broken CDs",
   "Swiss Miss powdered Hot Chocolate with little marshmallows", "a spatula",
-  "a Five Star binder", "a spider's egg sack", "3 dozen no bake cookies"
+  "a Five Star binder", "a spider's egg sack", "3 dozen no bake cookies","a 2L Water bottle",
+  "an angry bird", "multiple rose bushes", "multiple dragon scales", "omelette", "9 different staplers",
+  "the square root of pi", "69 Factorials!", "14 dozen school books", "15 harmonicas", "an assortment of chocolates"
+  "a block of dirt", "numbers", "200 meters of Cat 5 cable", "33 Broken DVDs", "an iPhone", "a phone", "a mobile phone"
+  "the continent of Australia", "the United States of America", "a bottle of superglue", "a door"
+  "a packet of chips", "a can of redbull", "a piece of paper", "a piece of cake"
 ]
 
 rnddesc = [
@@ -120,7 +126,11 @@ rnddesc = [
   'breathing', 'able to teleport', 'forgiving', 'awesomesauce', 'selfish',
   'in love with person above', 'important', 'evolving', 'very bored',
   'clueless', 'ignorant', 'wandering', 'uninspired', 'unbelieveable',
-  'close to getting banned'
+  'close to getting banned', 'playing video games', 'dreaming lucidly',
+  'crazy', 'weird', 'painted pink', 'inspiring', 'interesting', 'funny',
+  'sweet and sour', 'soft', 'pokeable', 'glomp-able', 'glomp-ready', 'hyper'
+  'hyperactive', 'infamous', 'sitting', 'squatting', 'squinting', 'breathing'
+  'the chosen one', 'rich', 'running', 'speaking', 'typing', 'reading this message'
 ]
 
 def command_hug(bot, room, nick, access_level, parameters, message):
@@ -145,7 +155,7 @@ def command_slap(bot, room, nick, access_level, parameters, message):
   else: target = nick
   if bot.self_nick[room].lower() in target.lower():
     if random.getrandbits(1):
-      return random.choice(["No.", "Never.", "Don't even think about it.", "I refuse."])
+      return random.choice(["No.", "Never.", "Don't even think about it.", "I refuse.", "No way!", "But why...? D:"])
     else:
       target = nick
   if random.getrandbits(1):
@@ -168,7 +178,7 @@ def command_stab(bot, room, nick, access_level, parameters, message):
   else: target = nick
   if bot.self_nick[room].lower() in target.lower():
     if random.getrandbits(1):
-      return random.choice(["No.", "Never.", "Don't even think about it.", "I refuse."])
+      return random.choice(["No.", "Never.", "Don't even think about it.", "I refuse.", "No way!", "Byt why...? D:"])
     else:
       target = nick
   return '/me stabs %s with %s'%(target, random.choice(rndobjects))
